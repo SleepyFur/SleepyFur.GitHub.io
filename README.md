@@ -1,2 +1,2 @@
-# SleepyFur.GitHub.io
+# sleepyfur.github.io
 My personal website
