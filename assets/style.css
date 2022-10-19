@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(47, 0, 0, 0.8),rgba(4, 27, 30, 0.8)),url(/assets/techcannon.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+    height: 100px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 2px 20px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f22c1e;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.splash-text{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.splash-text h1{
+    font-size: 62px;
+}
+
+.splash-text p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color:#fff;
+}
+
+.error-splash-text{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.error-splash-text h1{
+    font-size: 62px;
+    color:#f2811e;
+}
+
+.error-splash-text p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color:#fff;
+}
+
+.socials-button{
+    display:inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.socials-button:hover{
+    border: 1px solid #f22c1e;
+    background: #f22c1e;
+    transition: 1s;
+}
+
+.changelogtext {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    text-align: left;
+    margin: 10px;
+    bottom: 10%;
+    margin: 30px;
+}
+
+.changelogtext h1{
+    font-size: 40px;
+}
+
+.changelogtext p{
+    margin: 10px, 0 0px;
+    font-size: 10px;
+    color: #fff;
+}
+
+nav.fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .splash-text h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f22c1e;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s  ;
+    }
+    nav .fa{
+        display:block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 15px;
+    }
+}
