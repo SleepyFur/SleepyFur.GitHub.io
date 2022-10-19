@@ -81,6 +81,23 @@ nav img{
     transition: 1s;
 }
 
+.lefttext {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    text-align: left;
+}
+
+.lefttext h1{
+    font-size: 40px;
+}
+
+.lefttext p{
+    margin: 10px, 0 0px;
+    font-size: 10px;
+    color: #fff;
+}
+
 nav.fa{
     display: none;
 }
