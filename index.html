@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
     <head>
         <title>Home | AsrielHome</title>
         <meta property="og:title" content="Home | AsrielHome [Now With Embeds!]">
@@ -7,77 +6,69 @@
         <meta name="description" content="Hey! This embed took way too long, come check out my site! Thanks for reading this ♥">
         <meta property="og:description" content="Hey! This embed took way too long, come check out my site! Thanks for reading this ♥">
         <meta name="twitter:description" content="Hey! This embed took way too long, come check out my site! Thanks for reading this ♥">
-        <meta property="og:image" content="https://asrielhome.co.uk/assets/logo.png">
-        <meta name="twitter:image" content="https://asrielhome.co.uk/assets/logo.png">
+        <meta property="og:image" content="https://asrielhome.co.uk/assets/embedbanner.png">
+        <meta name="twitter:image" content="https://asrielhome.co.uk/assets/embedbanner.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="src.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <script src="../src.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     </head>
-<body>
-    <section class="header">
-        <nav>
-            <a href="https://asrielhome.co.uk"><img src="assets/logo.png"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a>HOME</a></li>
-                    <li><a href="/about-me/">ABOUT ME</a></li>
-                    <li><a href="/changelog/">CHANGELOG</a></li>
-                    <li><a href="/copyright&rights/">COPYRIGHT</a></li>
-                    <li><a href="/social-links/">SOCIALS</a></li>
+    <body>
+        <header>
+            <a class="logo" href="https://asrielhome.co.uk/"><img src="assets/logotest.png" alt="logo"></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="https://asrielhome.co.uk">Home</a></li>
+                    <li><a href="/about-me/">About Me</a></li>
+                    <li><a href="/changelog/">Changelog</a></li>
+                    <li><a href="/copyright&rights/">Copyright</a></li>
                 </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()""></i>
-        </nav>
-
-    <div class="splash-text">
+            </nav>
+            <a class="cta" href="/social-links/">Contact And Socials</a>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div class="splash-text">
             <h1>« Asriel, self proclaimed clown »</h1>
             <p>Average Programmer, Rhythm game enjoyer, Artist, and Clown. Usually spends my days chilling or working, LOL. <br>This website was made with HTML, CSS and Javascript</p>
             <a href="/social-links/" class="socials-button">My Socials</a>
         </div>
-
-    </section>
-    <!------ Course ------->
-
-    <section class="subhome">
-        <h1>Got any questions?</h1>
-        <p>Email us at feedback@asrielhome.co.uk !</p>
-
-        <div class="row">
-            <div class="coursecol">
-                <h3>Easy</h3>
-                <p>RANdoMBUULLSHITGOOOOOOOOOOOOOOOOO</p>
-            </div>
-            <div class="coursecol">
-                <h3>Intermediate</h3>
-                <p>RANdoMBUULLSHITGOOOOOOOOOOOOOOOOO</p>
-            </div>
-            <div class="coursecol">
-                <h3>Hard</h3>
-                <p>RANdoMBUULLSHITGOOOOOOOOOOOOOOOOO</p>
+        <div id="mobile__menu" class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="https://asrielhome.co.uk">Home</a>
+                <a href="/about-me/">About Me</a>
+                <a href="/changelog/">Changelog</a>
+                <a href="/copyright&rights/">Copyright</a>
             </div>
         </div>
+        <script type="text/javascript" src="mobile.js"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
 
+            if (this.hash !== "") {
+            event.preventDefault();
 
-    </section>
+            var hash = this.hash;
 
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
 
-
-
-    <!------Javascript (Toggle Menu)------>
-    <script>
-        var navLinks = document.getElementById("navLinks")
-
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-    </script>
-</body>
+                window.location.hash = hash;
+            });
+            }
+        });
+        });
+        </script>
+    </body>
+</html>

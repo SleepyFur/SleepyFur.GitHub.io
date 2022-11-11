@@ -1,48 +1,74 @@
 <!DOCTYPE html>
-<html>
     <head>
+        <title>Error! [404]</title>
+        <meta property="og:title" content="Error [404]">
+        <meta name="twitter:title" content="Error [404]">
+        <meta name="description" content="Why'd you share this link? It's a 404 page. Why????">
+        <meta property="og:description" content="Why'd you share this link? It's a 404 page. Why????">
+        <meta name="twitter:description" content="Why'd you share this link? It's a 404 page. Why????">
+        <meta property="og:image" content="https://asrielhome.co.uk/assets/embedbanner.png">
+        <meta name="twitter:image" content="https://asrielhome.co.uk/assets/embedbanner.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | AsrielHome</title>
-        <script src="src.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <script src="../src.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     </head>
-<body>
-    <section class="header">
-        <nav>
-            <a href="https://asrielhome.co.uk"><img src="images/logo.png"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="https://asrielhome.co.uk">HOME</a></li>
-                    <li><a href="/about-me/about-me.html">ABOUT ME</a></li>
-                    <li><a href="/changelog/changelog.html">CHANGELOG</a></li>
-                    <li><a href="/copyright&rights/copyright&rights.html">COPYRIGHT</a></li>
-                    <li><a href="/social-links/social-links.html">SOCIALS</a></li>
+    <body>
+        <header>
+            <a class="logo" href="https://asrielhome.co.uk/"><img src="assets/logotest.png" alt="logo"></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="https://asrielhome.co.uk">Home</a></li>
+                    <li><a href="/about-me/">About Me</a></li>
+                    <li><a href="/changelog/">Changelog</a></li>
+                    <li><a href="/copyright&rights/">Copyright</a></li>
                 </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()""></i>
-        </nav>
-
-    <div class="error-splash-text">
+            </nav>
+            <a class="cta" href="/social-links/">Contact And Socials</a>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div class="error-splash-text">
             <h1>⚠ Oops! That page doesn't exist! ⚠</h1>
             <p>[Error Code 404, Page Not Found]<br>You can use the buttons on the top right of the page (desktop) to navigate the site<br>On mobile, you can press the three lines icon to open the side panel</p>
             <a href="https://asrielhome.co.uk" class="socials-button">Back To Homepage</a>
         </div>
+        <div id="mobile__menu" class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="https://asrielhome.co.uk">Home</a>
+                <a href="/about-me/">About Me</a>
+                <a href="/changelog/">Changelog</a>
+                <a href="/copyright&rights/">Copyright</a>
+            </div>
+        </div>
+        <script type="text/javascript" src="mobile.js"></script>
 
-    </section>
-    <!------Javascript (Toggle Menu)------>
-    <script>
-        var navLinks = document.getElementById("navLinks")
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
 
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-    </script>
-</body>
+            if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                window.location.hash = hash;
+            });
+            }
+        });
+        });
+        </script>
+    </body>
+</html>

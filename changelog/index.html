@@ -1,56 +1,82 @@
 <!DOCTYPE html>
-<html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Changelog | AsrielHome</title>
+        <meta property="og:title" content="Changelog | AsrielHome [Now With Embeds!]">
+        <meta name="twitter:title" content="Changelog | AsrielHome [Now With Embeds!]">
+        <meta name="description" content="A log of all changes to the site! This embed took way too long, come check out my site! Thanks for reading this ♥">
+        <meta property="og:description" content="A log of all changes to the site! This embed took way too long, come check out my site! Thanks for reading this ♥">
+        <meta name="twitter:description" content="A log of all changes to the site! This embed took way too long, come check out my site! Thanks for reading this ♥">
+        <meta property="og:image" content="https://asrielhome.co.uk/assets/embedbanner.png">
+        <meta name="twitter:image" content="https://asrielhome.co.uk/assets/embedbanner.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../src.js"></script>
-        <link rel="stylesheet" href="../style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     </head>
-<body>
-    <section class="header">
-        <nav>
-            <a href="https://asrielhome.co.uk""><img src="../assets/logo.png"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="https://asrielhome.co.uk">HOME</a></li>
-                    <li><a href="/about-me/">ABOUT ME</a></li>
-                    <li><a>CHANGELOG</a></li>
-                    <li><a href="/copyright&rights/">COPYRIGHT</a></li>
-                    <li><a href="/social-links/">SOCIALS</a></li>
+    <body>
+        <header>
+            <a class="logo" href="https://asrielhome.co.uk/"><img src="../assets/logotest.png" alt="logo"></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="https://asrielhome.co.uk">Home</a></li>
+                    <li><a href="../about-me/">About Me</a></li>
+                    <li><a href="../changelog/">Changelog</a></li>
+                    <li><a href="../copyright&rights/">Copyright</a></li>
                 </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()""></i>
-        </nav>
-
-    <div class="splash-text">
-            <h1>« Changelog »</h1>
-            <p>This is the changelog of the site, holding all information regarding<br> updates and more</p>
+            </nav>
+            <a class="cta" href="../social-links/">Contact And Socials</a>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div class="splash-text">
+            <h1>« Changelog! »</h1>
+            <p>A log of all changes made to the site, including addition of features, bug fixes, and other general updates!</p>
+            <a href="../social-links/" class="socials-button">My Socials</a>
         </div>
+        <div id="mobile__menu" class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="https://asrielhome.co.uk">Home</a>
+                <a href="../about-me/">About Me</a>
+                <a href="../changelog/">Changelog</a>
+                <a href="../copyright&rights/">Copyright</a>
+            </div>
+        </div>
+        <div class="changelogtext">
+            <h1>Updates: </h1>
+            <p><br><br>Updated to ver 1.4: Fixed broken redirect links, cleaned code</p>
+            <p>Updated to ver 1.3: Subsites now do not display as "/changelog/changelog.html", and now appear as "/changelog/", Fixed an issue with assets failing to load</p>
+            <p>Updated to ver 1.2: Added Changelog page (pure HTML only), changed redirects on icon and button to site domain as opposed to the .html file</p>
+            <p>Updated to ver 1.1: Added home page, home page assets, created gradient and decorative features</p>
+            <p>Site launched [Ver 1.0]<br><br><br><br></p>
+        </div>
+        <script type="text/javascript" src="../mobile.js"></script>
 
-    <div class="changelogtext">
-        <h1>Updates: </h1>
-        <p>Updated to ver 1.4: Fixed broken redirect links, cleaned code</p>
-        <p>Updated to ver 1.3: Subsites now do not display as "/changelog/changelog.html", and now appear as "/changelog/", Fixed an issue with assets failing to load</p>
-        <p>Updated to ver 1.2: Added Changelog page (pure HTML only), changed redirects on icon and button to site domain as opposed to the .html file</p>
-        <p>Updated to ver 1.1: Added home page, home page assets, created gradient and decorative features</p>
-        <p>Site launched [Ver 1.0]</p>
-    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
 
-    </section>
-    <!------Javascript (Toggle Menu)------>
-    <script>
-        var navLinks = document.getElementById("navLinks")
+            if (this.hash !== "") {
+            event.preventDefault();
 
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-    </script>
-</body>
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                window.location.hash = hash;
+            });
+            }
+        });
+        });
+        </script>
+    </body>
+</html>
