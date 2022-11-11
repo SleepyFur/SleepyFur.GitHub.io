@@ -242,8 +242,23 @@ nav.fa{
     color: #edf0f1;
     cursor: pointer;
   }
-  
-  @media screen and (max-height: 450px) {
+
+@media(max-width: 700px){
+    .splash-text h1{
+        font-size: 20px;
+    }
+    .changelogtext h1{
+        font-size: 20px;
+    }
+    .socialstext h1{
+        font-size:20px
+    }
+    .error-splash-text h1{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-height: 450px) {
     .overlay a {
       font-size: 20px;
     }
