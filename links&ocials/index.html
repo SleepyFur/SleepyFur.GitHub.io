@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <head>
+        <title>Links & Socials | AsrielHome</title>
+        <meta property="og:title" content="Social Links | AsrielHome [Now With Embeds!]">
+        <meta name="twitter:title" content="Social Links | AsrielHome [Now With Embeds!]">
+        <meta name="description" content="A page consisting of my public social links. This embed took way too long, come check out my site! Thanks for reading this ♥">
+        <meta property="og:description" content="A page consisting of my public social links. This embed took way too long, come check out my site! Thanks for reading this ♥">
+        <meta name="twitter:description" content="A page consisting of my public social links. This embed took way too long, come check out my site! Thanks for reading this ♥">
+        <meta property="og:image" content="https://asrielhome.co.uk/assets/embedbanner.png">
+        <meta name="twitter:image" content="https://asrielhome.co.uk/assets/embedbanner.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../src.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="https://asrielhome.co.uk/"><img src="../assets/logotest.png" alt="logo"></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="https://asrielhome.co.uk">Home</a></li>
+                    <li><a href="../about-me/">About Me</a></li>
+                    <li><a href="../changelog/">Changelog</a></li>
+                    <li><a href="../copyright&rights/">Copyright</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="../social-links/">Contact And Socials</a>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div class="splash-text">
+            <h1>« Links & Socials »</h1>
+            <p>A page containing useful or fun links, usually to things I've made or done, such as playlists or projects I've worked on!<br>Currently, not many of my socials are available to the public, but here's a few that you're free to contact me at!<br></p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="socials-button">Oh? What's This?</a>
+        </div>
+        <div id="mobile__menu" class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="https://asrielhome.co.uk">Home</a>
+                <a href="/about-me/">About Me</a>
+                <a href="/changelog/">Changelog</a>
+                <a href="/copyright&rights/">Copyright</a>
+                <a href="/links&ocials/">Links & Socials</a>
+            </div>
+        </div>
+        <div class="socialstext">
+            <h1>Links and Tags (subject to change):</h1>
+            <br><br>
+            <a href="mailto:feedback@asrielhome.co.uk?subject = Feedback&body = Message" target="_blank" rel="noopener noreferrer"class="element-button">Email Me!</a>
+            <br><br><br>
+            <button onclick="spotifyfunction()"class="element-button">Spotify Playlist! (Click to Hide/Show)</button>
+            
+            <div id="myDIV">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0P6hY1NGOqpPEvenX9hmvt?utm_source=generator&theme=0" width="40%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            
+            
+                <a></a>
+            <p></p>
+        </div>
+
+        <script>
+            function spotifyfunction() {
+              var x = document.getElementById("myDIV");
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
+            </script>
+        <script type="text/javascript" src="../mobile.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                window.location.hash = hash;
+            });
+            }
+        });
+        });
+        </script>
+    </body>
+</html>

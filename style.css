@@ -40,7 +40,7 @@ nav{
 body {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(47, 0, 0, 0.8),rgba(4, 27, 30, 0.8)),url(assets/mainbackg.jpg);
+    background-image: url(assets/mainbackground.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -104,6 +104,24 @@ body {
     transition: 1s;
 }
 
+.element-button{
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.element-button:hover{
+  border: 1px solid #1ef26f;
+  background: #1ef26f;
+  transition: 1s;
+}
+
 .changelogtext {
     width: 90%;
     color: #fff;
@@ -111,7 +129,7 @@ body {
     text-align: left;
     margin: 10px;
     bottom: -50%;
-    margin: 30px;
+    margin: 20px;
 }
 
 .changelogtext h1{
@@ -125,20 +143,25 @@ body {
 }
 
 .socialstext {
-    width: 90%;
+    padding-top: 510px;
+    padding-left: 15px;
+    width: 100%;
     color: #fff;
     position: absolute;
     text-align: left;
+    vertical-align: bottom;
     margin: 10px;
-    bottom: -40%;
-    margin: 30px;
 }
 
 .socialstext h1{
+    text-align: left;
+    vertical-align: bottom;
     font-size: 40px;
 }
 
 .socialstext p{
+    text-align: left;
+    vertical-align: bottom;
     margin: 10px, 0 0px;
     font-size: 10px;
     color: #fff;
